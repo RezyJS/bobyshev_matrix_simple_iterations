@@ -126,7 +126,4 @@ def check_gamma(matrix: list[list[float]], length) -> float:
 
 
 def get_iterations_value(epsilon: int, metric: callable, x0: list[float], x1: list[float], coefficient: tuple[bool, float]) -> float:
-    return math.ceil(
-        math.log(math.pow(10, -epsilon) / metric(x0, x1)
-                 * (1 - coefficient[1]), coefficient[1])
-    )
+    return math.ceil(math.log(math.pow(10, -epsilon) / metric(x0, x1) * (1 - coefficient[1]), coefficient[1]))
